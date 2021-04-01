@@ -11,7 +11,7 @@
     margin-left: 22.3rem;
     margin-bottom: 10px !important;}
 
-    .nbrDg .course-details-area .course-details-top .course-tab-list .nav .nav-item a.nav-link.active {
+    .course-details-area .course-details-top .course-tab-list .nav .nav-item a.nav-link.active {
         background: linear-gradient(
     90deg
     ,#044298 0%,#1d6be4 100%) !important;
@@ -87,6 +87,11 @@
     .course-filter .filter-items .course-item .course-content {
         background: #fff;
         padding: 20px 10px !important;
+    }
+    .course-filter .filter-items .course-item .course-content {
+        background: rgb(255, 255, 255);
+        padding: 20px 10px !important;
+        border-radius: 0px 0px 5px 5px;
     }
   
     h6 a{
