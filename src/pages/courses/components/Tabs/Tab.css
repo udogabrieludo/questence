@@ -84,10 +84,11 @@
         box-shadow: 0px 0px 1px 1px #eeeeeeba;
         border-radius: 5px;
     }
-    .hPJwSN .course-filter .filter-items .course-item .course-content {
+    .course-filter .filter-items .course-item .course-content {
         background: #fff;
         padding: 20px 10px !important;
     }
+  
     h6 a{
         color: #076ac8 !important;
     }
