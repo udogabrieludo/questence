@@ -53,7 +53,7 @@ const TabContainer = () => {
                                                    <Col md="2">
                                                     
                                                      <CoursePrice filterType='Sort By:' filtername='Sort Fields' /><br /> 
-                                                     <CoursePrice   filterType='Filter By:' filtername='Category'/>
+                                                     <CoursePrice  filterType='Filter By:' filtername='Category'/>
                                                      <CoursePrice filtername='Program'/>
                                                      <CoursePrice  filtername='Learning Partner'/>
                                                      <CoursePrice  filtername='Ownership'/>
