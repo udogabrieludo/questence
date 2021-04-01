@@ -27,6 +27,10 @@ const TabContainer = () => {
                                       
                                             <Tab.Container defaultActiveKey="overview">
                                             
+                                            <div className="container-fluid">
+                                             <div className="row">
+                                                 
+                                                 <div className="md-col-10 offset-2">
                                                  <Nav className="flex-column" >
                                                      <Nav.Item>
                                                             <Nav.Link eventKey="overview">All Courses</Nav.Link>
@@ -47,6 +51,9 @@ const TabContainer = () => {
                                                             <Nav.Link eventKey="accomplishment">Accomplishments</Nav.Link>
                                                         </Nav.Item>
                                                     </Nav>
+                                                 </div>
+                                            </div>
+                                            </div>
                                                      
                                              <Tab.Content>
                                                
