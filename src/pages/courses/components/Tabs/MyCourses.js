@@ -16,16 +16,16 @@ function MyCourses() {
         <Styles>
             {/* Course Area */}
             <section className="course-filter">
-                <Container>
-                    <Row>
+                <div className="pr-0 container">
+                    <div className="row">
                        
-                        <Col md="12">
+                        <div className="col-md-12">
                             
-                            <Row className="filter-items">
+                            <div  className=" row filter-items">
                                 {
                                    
                                     Datas.dataList.map((data, i) => (
-                                        <Col lg="3" md="4" key={i}>
+                                        <div className="col-md-3" key={i}>
                                             <div className="course-item">
                                                 <Link to={process.env.PUBLIC_URL + data.courseLink}>
                                                     <div className="course-image" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/${data.imgUrl})`}}>
@@ -56,14 +56,14 @@ function MyCourses() {
 
                                             </div>
                                          
-                                        </Col>
+                                        </div>
                                     ))
                                 }
-                            </Row>
-                        </Col>
+                            </div>
+                        </div>
                        
-                    </Row>
-                </Container>
+                    </div>
+                </div>
             </section>
         </Styles>
     )

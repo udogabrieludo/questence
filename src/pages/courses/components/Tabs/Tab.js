@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, Row, Col, Tab, Nav} from 'react-bootstrap';
 import { Styles } from '../../styles/course.js';
 import './Tab.css'
@@ -8,6 +8,13 @@ import MyCourses from './MyCourses.js';
 
 
 const TabContainer = () => {
+
+    const [toggleGridList, setToggleGridList] = useState(false)
+
+    const toggle = ()=>{
+        setToggleGridList((previous)=> !previous)
+    }
+
     return (
         <Styles>
                 {/* Course Details */}
@@ -31,7 +38,7 @@ const TabContainer = () => {
                                              <div className="row">
                                                  
                                                  <div className="md-col-10 offset-2">
-                                                 <Nav className="flex-column" >
+                                                    <Nav className="flex-column" >
                                                      <Nav.Item>
                                                             <Nav.Link eventKey="overview">All Courses</Nav.Link>
                                                         </Nav.Item>
@@ -51,6 +58,7 @@ const TabContainer = () => {
                                                             <Nav.Link eventKey="accomplishment">Accomplishments</Nav.Link>
                                                         </Nav.Item>
                                                     </Nav>
+                                                    
                                                  </div>
                                             </div>
                                             </div>
@@ -68,11 +76,70 @@ const TabContainer = () => {
                                                   
                                                   
                                                   <Tab.Pane eventKey="overview" className="overview-tab">
-                                                  <MyCourses />
+                                                  <div className="d-flex justify-content-lg-end" >
+                                                       <div className="toggle-icon" onClick={toggle}>
+                                                            <i className={toggleGridList ? ' fas fa-border-all': 'fas fa-list'}></i>{ toggleGridList ? " View as Grid": " View as List"}</div>   
+                                                    </div>
+                                                    {toggleGridList ? <>
+
+                                                        <table className="table table-borderless responsive">
+                                                  <thead>
+                                                      <tr>
+                                                      <th scope="col">Course Code</th>
+                                                      <th scope="col">Course Name</th>
+                                                      <th scope="col">Instructor Name</th>
+                                                      <th scope="col">Learning Partner</th>
+                                                      <th scope="col">Category</th>
+                                                      <th scope="col">Program</th>
+                                                      <th scope="col">Ownership</th>
+                                                      <th scope="col">Start Date</th>
+                                                      <th scope="col">Status</th>
+  
+  
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      {CourseDataList.map((course, i)=>(
+                                                          <tr key={i}>
+                                                          <td >{course.coursecode}</td>
+                                                          <td><strong>{course.coursename}</strong></td>
+                                                          <td>{course.instructorname}</td>
+                                                          <td>{course.Learningpartner}</td>
+                                                          <td>{course.startdate}</td>
+                                                          <td>{course.startdate}</td>
+                                                          <td>{course.ownership}</td>
+                                                          <td>
+                                                          {course.startdate}
+                                                           </td>
+                                                         
+                                                         <td><div className="alert alert-success">{course.status}</div></td>
+                                                         </tr> 
+  
+                                                      ))}
+                                                      
+                                                      
+                                                  </tbody>
+                                                  </table>
+                                                       
+                                                     </>: <>
+                                                
+                                                     <MyCourses />
+                                                    </>}
+                                                 
   
                                                   </Tab.Pane>
                                                    <Tab.Pane eventKey="activecourses" className="overview-tab">
-                                                  <table className="table table-borderless responsive">
+                                                   <div className="d-flex justify-content-lg-end" >
+                                                       <div className="toggle-icon"  onClick={toggle}> 
+                                                        <i className={toggleGridList ? '  fas fa-list': 'fas fa-border-all'}></i>
+                                                       { toggleGridList ? " View as List ": " View as Grid"}</div>
+                                                       
+                                                    </div>
+                                                    {toggleGridList ? <>
+                                                        <MyCourses />
+                                                    </> : <>
+                                                    
+                                                    <table className="table table-borderless responsive">
                                                   <thead>
                                                       <tr>
                                                       <th scope="col">Course Code</th>
@@ -111,10 +178,16 @@ const TabContainer = () => {
                                                   </tbody>
                                                   </table>
   
+                                                    </>} 
+                                                 
                                                   
   
                                                   </Tab.Pane>
                                                   <Tab.Pane eventKey="upcomingcourse" className="curriculum-tab">
+                                                  <div className="d-flex justify-content-lg-end" >
+                                                       <div className="toggle-icon"> <i className="fas fa-border-all"></i> View as Grid</div>
+                                                       
+                                                    </div>
                                                       
                                                   <table className="table table-borderless responsive">
                                                   <thead>
@@ -128,8 +201,6 @@ const TabContainer = () => {
                                                       <th scope="col">Ownership</th>
                                                       <th scope="col">Start Date</th>
                                                       <th scope="col">Status</th>
-  
-  
                                                       </tr>
                                                   </thead>
                                                   <tbody>
@@ -157,6 +228,10 @@ const TabContainer = () => {
   
                                                   </Tab.Pane>
                                                   <Tab.Pane eventKey="completedcourse" className="instructor-tab">
+                                                  <div className="d-flex justify-content-lg-end" >
+                                                       <div className="toggle-icon"> <i className="fas fa-border-all"></i> View as Grid</div>
+                                                       
+                                                    </div>
                                                   <table className="table table-borderless responsive">
                                                   <thead>
                                                       <tr>
@@ -201,6 +276,10 @@ const TabContainer = () => {
                                                      
                                                   </Tab.Pane>
                                                   <Tab.Pane eventKey="wishlist" className="review-tab">
+                                                  <div className="d-flex justify-content-lg-end" >
+                                                       <div className="toggle-icon"> <i className="fas fa-border-all"></i> View as Grid</div>
+                                                       
+                                                    </div>
                                                   <table className="table table-borderless responsive">
                                                   <thead>
                                                       <tr>
