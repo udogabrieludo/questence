@@ -94,7 +94,7 @@ const TabContainer = () => {
   <div className="toggleBtn">
             <div className="d-flex justify-content-end" >
                 <div className="toggle-icon" onClick={toggle}>
-                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as Grid": " View as List"}</div>   
+                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as List": " View as Grid"}</div>   
                 </div>
             </div>
             {toggleGridList ?
@@ -145,7 +145,7 @@ const TabContainer = () => {
   <div className="toggleBtn">
             <div className="d-flex justify-content-end" >
                 <div className="toggle-icon" onClick={toggle}>
-                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as Grid": " View as List"}</div>   
+                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as List": " View as Grid"}</div>   
                 </div>
             </div>
     {toggleGridList ?
@@ -194,7 +194,7 @@ const TabContainer = () => {
         <div className="toggleBtn">
             <div className="d-flex justify-content-end" >
                 <div className="toggle-icon" onClick={toggle}>
-                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as Grid": " View as List"}</div>   
+                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as List": " View as Grid"}</div>   
                 </div>
             </div>
             {toggleGridList ?
@@ -245,7 +245,7 @@ const TabContainer = () => {
    <div className="toggleBtn">
             <div className="d-flex justify-content-end" >
                 <div className="toggle-icon" onClick={toggle}>
-                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as Grid": " View as List"}</div>   
+                        {toggleGridList ? <Grid  size={15} />: <List  size={15} />} { toggleGridList ? " View as List": " View as Grid"}</div>   
                 </div>
             </div>
             {toggleGridList ?
