@@ -16,7 +16,7 @@ function MyCourses() {
         <Styles>
             {/* Course Area */}
             <section className="course-filter">
-                <div className="pr-0 container">
+                <div className="container-fluid">
                     <div className="row">
                        
                         <div className="col-md-12">

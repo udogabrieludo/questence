@@ -17,6 +17,7 @@
     "react-compound-timer": "^1.2.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
+    "react-feather": "^2.0.9",
     "react-id-swiper": "^4.0.0",
     "react-modal-image": "^2.5.0",
     "react-modal-video": "^1.2.3",
@@ -26,7 +27,6 @@
     "styled-components": "^5.1.1",
     "swiper": "^5.4.5"
   },
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

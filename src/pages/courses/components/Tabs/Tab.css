@@ -2,7 +2,7 @@
 .course-details-area {
     padding: 70px 0 0px;
     background: #F6F9FF;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .course-details-area .course-details-top .course-tab-list .nav {
@@ -158,20 +158,92 @@
         border-radius: 5px;
         border: 1px solid #ced4da75;
         font-weight: 600;
-        font-style: 16px;
+        font-size: 14px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
         cursor: pointer;
+        display: flex;
+    align-items: center;
 }
     .filter-type{
     font-size: 16px;
     font-weight: 600;
     padding-bottom: 10px;
     }
-    .heading h4{
-       margin-left: 4rem;
+    .mylearning-title h4{
+        color: rgb(24, 43, 73);
+        font-weight: 600;
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+    .table-wrapper a{
+      font-size: 15px ;
+      color:#044298;
+    }
+    .toggleBtn{
+        padding-top: 1rem;
+    }
+    .toggleBtn svg {
+        margin-right: 4px;
+    }
+    .responsive-tab{
+        
+            display: flex !important;
+            /* flex-wrap: wrap !important; */
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            flex-wrap: nowrap !important;
+      
+    }
+    .filter-sidebar{
+        padding-top: 1.5rem;
+    }
+    .nav-tabs{
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    flex-wrap: nowrap !important;
+    }
+    .nav-tab .nav-link.active {
+        color: #f8f9fa !important;
+        background-color: #05509e !important;
+        border-color: #dee2e6 #dee2e6 #fff;
+    }
+    .nav-tabs .nav-link.active {
+        color: #f8f9fa !important;
+        background: linear-gradient(90deg,#044298,#1d6be4)!important;
+        border-color: #dee2e6 #dee2e6 #fff;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .nav-tabs .nav-link {
+        margin-bottom: -1px;
+        border: 1px solid transparent;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        color: rgb(68, 68, 68);
+        font-size: 14px;
+        font-weight: 600;
+      
     }
 
+    .tab-content {
+        border-top: 1px solid #e6e6e6;
+        padding-top: 1.5rem;
+        /* background: #F6F9FF; */
+        max-height: 100vh;
+        padding: 1rem 0rem;
+        display: block;
+    }
+
+    @media (max-width: 600px){
+        .nav-tabs{
+        margin-top: 1rem;}
+    
+    }
     
